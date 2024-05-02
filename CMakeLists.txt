@@ -17,8 +17,11 @@ message(STATUS "CROWDIN_EXECUTABLE  = ${CROWDIN_EXECUTABLE}")
 message(STATUS "ENV{SHELL}          = $ENV{SHELL}")
 message(STATUS "ENV{BASH_VERSION}   = $ENV{BASH_VERSION}")
 message(STATUS "ENV{PATH}           = $ENV{PATH}")
+execute_process(COMMAND env OUTPUT_VARIABLE ENV_CMD_OUT)
+message(STATUS "ENV_CMD_OUT         =\n"
+               "${ENV_CMD_OUT}")
+
 if(EXISTS "$ENV{HOME}/.bashrc")
     message(STATUS "File \"$ENV{HOME}/.bashrc\" exists.")
 endif()
-
 message(STATUS "----------------------------------------")

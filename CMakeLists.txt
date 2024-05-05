@@ -3,6 +3,9 @@ project(demo-cmake-tools-bashrc)
 
 message(STATUS "----------------------------------------")
 
+message(STATUS "CMAKE_COMMAND       = ${CMAKE_COMMAND}")
+message(STATUS "CMAKE_VERSION       = ${CMAKE_VERSION}")
+
 find_program(JEKYLL_EXECUTABLE  NAMES jekyll)
 find_program(NODE_EXECUTABLE    NAMES node)
 find_program(PO4A_EXECUTABLE    NAMES po4a)
